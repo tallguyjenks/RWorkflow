@@ -1,0 +1,13 @@
+Package: workflow
+Title: A Robust workflow for software driven data analysis
+Version: 0.0.1
+Authors@R: 
+    person(given = "Bryan",
+           family = "Jenks",
+           role = c("aut", "cre"),
+           email = "bryanjenks@protonmail.com",
+           comment = c(ORCID = "0000-0002-9604-3069"))
+Description: A Robust document for discussing a great way to structure analysis.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
