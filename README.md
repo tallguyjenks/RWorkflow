@@ -1,7 +1,3 @@
----
-title: "R Workflow"
----
-
 # Table Of Contents {#toc}
 
 * [Setup](#setup)
