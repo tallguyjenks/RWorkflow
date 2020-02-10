@@ -1,4 +1,4 @@
-# Table Of Contents {#toc}
+# Table Of Contents
 
 * [Setup](#setup)
   - [Step 0 - New Package](#setup0)
@@ -14,15 +14,15 @@
   - [Step 4 - Iteration](#analysis4)
   - [Step 5 - Documentation](#analysis5)
   - [Step 6 - Documentation Compilation](#analysis6)
-* [References](#ref)
-* [Clean Code](#clean)
+* [References](#references)
+* [Clean Code](#clean-code)
   - [Step 1 - Devtools Check](#clean1)
   - [Step 2 - Lintr](#clean2)
   - [Step 3 - README](#clean3)
   - [Step 4 - CHANGELOG](#clean4)
 * [Tips](#tips)
 
-# SETUP {#setup}
+# SETUP
 
 <center>
 
@@ -32,13 +32,13 @@
 
 ## 0. Create a new package file {#setup0}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 > file --> New Project --> New/Existing Directory --> R Package
 
 ## 1. Fill out description file {#setup1}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 ```yaml
 Package: workflow
@@ -58,7 +58,7 @@ LazyData: true
 
 ## 2. use the package loading script {#setup2}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 This way it just loops over a vector of the packages and installs what isnt alread installed and loads what is installed so it is available for the RMarkdown product.
 
@@ -79,7 +79,7 @@ lapply(packages, library, character.only = TRUE) %>%
 
 ## 3. TODO management {#setup3}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 If you have multiple files or a large RMarkdown document and you use commented `<!-- TODO/BUG/FIXME/HACK -->` items and want to see where all of them are then use the `todor` package with the following snippet
 
@@ -96,13 +96,13 @@ todor::todor_package()
 
 ## 4. Create Data/ {#setup4}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 Create the `Data/` directory to hold raw data files that will be cleaned and processed by `R` scripts in the `R/` directory for the RMarkdown document when sourced.
 
 ## 5. Update .Rbuildignore {#setup5}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 When building a package for installation and reproducablilty have the build process ignore certain files, driectories and other things that it shouldn't touch during the build process
 
@@ -113,7 +113,7 @@ if keeping the package in `GIT` version control then also update the `.gitignore
 
 # ANALYSIS {#analysis}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 <center>
 
@@ -123,7 +123,7 @@ if keeping the package in `GIT` version control then also update the `.gitignore
 
 ## 1. Begin Writing Your Content {#analysis1}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 In your RMarkdown Document you can begin filling in your content with what ever template or way you prefer to write in your document. There are many ways to convey the results and workflow of your analysis, you have a package, a single stand alone RMarkdown document, a bookdown book, HTML output only, theres a million ways to perofrm an analysis and this is just going to be a document about some of the more common parts of the workflow with nuances left to personalization and preference.
 
@@ -133,13 +133,13 @@ For local file management in the `.Rproj` project directory, i and many many oth
 
 ## 2. Create New R Function as needed  {#analysis2}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 functions into seperate `R` script files in `R/` and if there are a lot of functions group their filenames with some sort of convention that groups them `AAA_Function.R`
 
 ## 3. Write Unit Tests {#analysis3}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 To start using unit tests `devtools::use_testthat()`
 
@@ -147,13 +147,13 @@ to run all current tests `Ctrl + Shift + T` or `devtools::test()`
 
 ## 4. Test, Fix, Iterate {#analysis4}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 Run your tests on your developing functions and fix any **ERRORS**, **WARNINGS**, or **NOTES** that come up 
 
 ## 5. Document Completed R Functions {#analysis5}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 Use `roxygen2` documentation on all functions script files in `R/` 
 
@@ -165,13 +165,13 @@ Use `roxygen2` documentation on all functions script files in `R/`
 
 ## 6. Compile Your Documentaiton {#analysis6}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 Run `devtools::document()` (or press `Ctrl + Shift + D` in RStudio) to compile your documents into function documentation that appears in the `man/` directory and the NAMESPACE that contains all `@export` functions.
 
 # REFERENCES {#ref}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 Writing a bibliography for your R packages
 
@@ -190,7 +190,7 @@ bibliography: [cited.bib, packages.bib]
 
 # CLEAN CODE {#clean}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 <center>
 
@@ -200,7 +200,7 @@ bibliography: [cited.bib, packages.bib]
 
 ## 1. Devtools Check {#clean1}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 To check if your pacakge is ready for distribution and installable use: 
 
@@ -208,7 +208,7 @@ To check if your pacakge is ready for distribution and installable use:
 
 ## 2. Lintr {#clean2}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 use `lintr` for linting your R code
 
@@ -219,13 +219,13 @@ lintr::lint_package()
 
 ## 3. README {#clean3}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 Use `README.md` file for github or just general user info, even keep an `.Rmd` document that compiles to a markdown document if you so wish that can be used to explain the package to users in a medium --> long form format so the user knows what to do to reproduce the analysis or use the package.
 
 ## 4. NEWS/CHANGELOG {#clean4}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 Use `NEWS.md` as the CHANGELOG for your package
 
@@ -328,6 +328,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # TIPS {#tips}
 
-[Return To Table Of Contents](#toc)
+[Return To Table Of Contents](#table-of-contents)
 
 - Using `# TEXT -----` inside an R code chunk adds it to the table of contents of the RMarkdown document
