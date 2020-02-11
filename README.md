@@ -1,7 +1,5 @@
 # Table Of Contents
 
-<div style="align: center">
-
 * [Setup](#setup)
   - [Step 0 - New Package](#Create-a-new-package-file)
   - [Step 1 - DESCRIPTION](#Fill-out-description-file)
@@ -24,19 +22,13 @@
   - [Step 4 - CHANGELOG](#changelog)
 * [Tips](#tips)
 
-</div>
-
 # SETUP
 
 [Return To Table Of Contents](#table-of-contents)
 
 <center>
 
-<div style="align: center">
-
 <img src="./img/dia1.png">
-
-</div>
 
 </center>
 
