@@ -1,26 +1,26 @@
 # Table Of Contents
 
 * [Setup](#setup)
-  - [Step 0 - New Package](#0.-Create-a-new-package-file)
-  - [Step 1 - DESCRIPTION]()
-  - [Step 2 - Package Loading]()
-  - [Step 3 - TODO Management]()
-  - [Step 4 - Data/]()
-  - [Step 5 - .Rbuildignore]()
-* [Analysis]()
-  - [Step 1 - Writing .Rmd]()
-  - [Step 2 - New Functions]()
-  - [Step 3 - Unit Tests]()
-  - [Step 4 - Iteration]()
-  - [Step 5 - Documentation]()
-  - [Step 6 - Documentation Compilation]()
-* [References]()
-* [Clean Code]()
-  - [Step 1 - Devtools Check]()
-  - [Step 2 - Lintr]()
-  - [Step 3 - README]()
-  - [Step 4 - CHANGELOG]()
-* [Tips]()
+  - [Step 0 - New Package](#Create-a-new-package-file)
+  - [Step 1 - DESCRIPTION](#Fill-out-description-file)
+  - [Step 2 - Package Loading](#use-the-package-loading-script)
+  - [Step 3 - TODO Management](#todo-management)
+  - [Step 4 - Data/](#create-data-directory)
+  - [Step 5 - .Rbuildignore](#Update-Rbuildignore)
+* [Analysis](#analysis)
+  - [Step 1 - Writing .Rmd](#Begin-Writing-Your-Content)
+  - [Step 2 - New Functions](#Create-New-R-Function-as-needed)
+  - [Step 3 - Unit Tests](#write-unit-tests)
+  - [Step 4 - Iteration](#test-fix-iterate)
+  - [Step 5 - Documentation](#Document-Completed-R-Functions)
+  - [Step 6 - Documentation Compilation](#Compile-Your-Documentation)
+* [References](#references)
+* [Clean Code](#clean-code)
+  - [Step 1 - Devtools Check](#devtools-check)
+  - [Step 2 - Lintr](#lintr)
+  - [Step 3 - README](#readme)
+  - [Step 4 - CHANGELOG](#changelog)
+* [Tips](#tips)
 
 # SETUP
 
@@ -32,13 +32,13 @@
 
 </center>
 
-## 0. Create a new package file
+## Create a new package file
 
 [Return To Table Of Contents](#table-of-contents)
 
 > file --> New Project --> New/Existing Directory --> R Package
 
-## 1. Fill out description file
+## Fill out description file
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -58,7 +58,7 @@ Encoding: UTF-8
 LazyData: true
 ```
 
-## 2. use the package loading script
+## use the package loading script
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -79,7 +79,7 @@ lapply(packages, library, character.only = TRUE) %>%
   invisible()
 ```
 
-## 3. TODO management
+## TODO management
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -96,13 +96,13 @@ todor::todor(file = docs)
 todor::todor_package()
 ```
 
-## 4. Create Data/
+## Create Data directory
 
 [Return To Table Of Contents](#table-of-contents)
 
 Create the `Data/` directory to hold raw data files that will be cleaned and processed by `R` scripts in the `R/` directory for the RMarkdown document when sourced.
 
-## 5. Update .Rbuildignore
+## Update Rbuildignore
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -123,7 +123,7 @@ if keeping the package in `GIT` version control then also update the `.gitignore
 
 </center>
 
-## 1. Begin Writing Your Content
+## Begin Writing Your Content
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -133,13 +133,13 @@ Never use `require()` or `library()` in a packaged analysis, put these items in 
 
 For local file management in the `.Rproj` project directory, i and many many others prefer to use the `here` package that uses the project root directory as the relative root and use relative directory references to reference other files in your package.
 
-## 2. Create New R Function as needed
+## Create New R Function as needed
 
 [Return To Table Of Contents](#table-of-contents)
 
 functions into seperate `R` script files in `R/` and if there are a lot of functions group their filenames with some sort of convention that groups them `AAA_Function.R`
 
-## 3. Write Unit Tests
+## Write Unit Tests
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -147,13 +147,13 @@ To start using unit tests `devtools::use_testthat()`
 
 to run all current tests `Ctrl + Shift + T` or `devtools::test()`
 
-## 4. Test, Fix, Iterate
+## Test Fix Iterate
 
 [Return To Table Of Contents](#table-of-contents)
 
 Run your tests on your developing functions and fix any **ERRORS**, **WARNINGS**, or **NOTES** that come up 
 
-## 5. Document Completed R Functions
+## Document Completed R Functions
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -165,7 +165,7 @@ Use `roxygen2` documentation on all functions script files in `R/`
 
 [Documentation Info](http://r-pkgs.had.co.nz/man.html)
 
-## 6. Compile Your Documentaiton
+## Compile Your Documentation
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -200,7 +200,7 @@ bibliography: [cited.bib, packages.bib]
 
 </center>
 
-## 1. Devtools Check
+## Devtools Check
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -208,7 +208,7 @@ To check if your pacakge is ready for distribution and installable use:
 
 `devtools::check()`, or press `Ctrl + Shift + E` in RStudio. to check your package for ERRORS, WARNINGS, or NOTES
 
-## 2. Lintr
+## Lintr
 
 [Return To Table Of Contents](#table-of-contents)
 
@@ -219,13 +219,13 @@ use `lintr` for linting your R code
 lintr::lint_package()
 ```
 
-## 3. README
+## README
 
 [Return To Table Of Contents](#table-of-contents)
 
 Use `README.md` file for github or just general user info, even keep an `.Rmd` document that compiles to a markdown document if you so wish that can be used to explain the package to users in a medium --> long form format so the user knows what to do to reproduce the analysis or use the package.
 
-## 4. NEWS/CHANGELOG
+## CHANGELOG
 
 [Return To Table Of Contents](#table-of-contents)
 
