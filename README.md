@@ -18,7 +18,7 @@
 * [Clean Code](#clean-code)
   - [Step 1 - Devtools Check](#devtools-check)
   - [Step 2 - Lintr](#lintr)
-  - [Step 3 - README](#readme)
+  - [Step 3 - README](#a-readme)
   - [Step 4 - CHANGELOG](#changelog)
 * [Tips](#tips)
 
@@ -219,7 +219,7 @@ use `lintr` for linting your R code
 lintr::lint_package()
 ```
 
-## README
+## A README
 
 [Return To Table Of Contents](#table-of-contents)
 
