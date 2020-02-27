@@ -46,7 +46,7 @@
 Package: workflow
 Title: A Robust workflow for software driven data analysis
 Version: 0.0.1
-Authors@R: 
+Authors@R:
     person(given = "Bryan",
            family = "Jenks",
            role = c("aut", "cre"),
@@ -66,7 +66,13 @@ This way it just loops over a vector of the packages and installs what isnt alre
 
 ```r
 # Package names
-packages <- c("magrittr", "here", "DiagrammeR", "todor")
+packages <- c("magrittr", "dplyr", "ggplot2",################ Tidyverse packages
+	      "here",######################################## Directory management
+	      "knitr", "rmarkdown",########################## RMD libs
+	      "todor", "lintr",	############################# Code management libs
+	      "DT", "kableExtra",############################ Table libs
+	      "roxygen2", "testthat", "usethis", "devtools" # package libs
+	     )
 
 # Install packages not yet installed
 installed_packages <- packages %in% rownames(installed.packages())
@@ -108,7 +114,7 @@ Create the `Data/` directory to hold raw data files that will be cleaned and pro
 
 When building a package for installation and reproducablilty have the build process ignore certain files, driectories and other things that it shouldn't touch during the build process
 
-**OPTIONAL** 
+**OPTIONAL**
 
 if keeping the package in `GIT` version control then also update the `.gitignore`
 
@@ -151,13 +157,13 @@ to run all current tests `Ctrl + Shift + T` or `devtools::test()`
 
 [Return To Table Of Contents](#table-of-contents)
 
-Run your tests on your developing functions and fix any **ERRORS**, **WARNINGS**, or **NOTES** that come up 
+Run your tests on your developing functions and fix any **ERRORS**, **WARNINGS**, or **NOTES** that come up
 
 ## Document Completed R Functions
 
 [Return To Table Of Contents](#table-of-contents)
 
-Use `roxygen2` documentation on all functions script files in `R/` 
+Use `roxygen2` documentation on all functions script files in `R/`
 
 - **First line:** Title
 - **Second line:** Description
@@ -180,7 +186,7 @@ Writing a bibliography for your R packages
 ```r
 # automatically create a bib database for R packages
 knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+  .packages(), packages #this is made in the lib loading section
 ), 'packages.bib')
 ```
 
@@ -188,6 +194,12 @@ in your `yaml` portion of the RMarkdown document you can use a `yaml` array to c
 
 ```yaml
 bibliography: [cited.bib, packages.bib]
+```
+
+and for packages, you can use this `yaml` trick to have all non-inline citations i.e. the `R` packages used, immediately cited at the end of the document:
+
+```yaml
+nocite: '@*'
 ```
 
 # CLEAN CODE
@@ -204,7 +216,7 @@ bibliography: [cited.bib, packages.bib]
 
 [Return To Table Of Contents](#table-of-contents)
 
-To check if your pacakge is ready for distribution and installable use: 
+To check if your pacakge is ready for distribution and installable use:
 
 `devtools::check()`, or press `Ctrl + Shift + E` in RStudio. to check your package for ERRORS, WARNINGS, or NOTES
 
@@ -215,7 +227,7 @@ To check if your pacakge is ready for distribution and installable use:
 use `lintr` for linting your R code
 
 ```r
-# Good suggestions for making legible and consistently formatted code 
+# Good suggestions for making legible and consistently formatted code
 lintr::lint_package()
 ```
 
