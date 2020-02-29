@@ -56,7 +56,9 @@ Description: A Robust document for discussing a great way to structure analysis.
 License: MIT file LICENSE # The license can be written out in the 'LICENSE' File
 Encoding: UTF-8
 LazyData: true
+# Roxygen: list(markdown = TRUE) if you want markdown support for the documentation use this option
 ```
+
 
 ## use the package loading script
 
@@ -168,6 +170,19 @@ Use `roxygen2` documentation on all functions script files in `R/`
 - **First line:** Title
 - **Second line:** Description
 - **Subsequent lines:** Details
+
+[A link to Cheat Sheet Documentation](https://roxygen2.r-lib.org/articles/rd-formatting.html#introduction)
+
+Bare Bones Template:
+
+```r
+#' @title	# This Is the Name of your funtion
+#' @description # This is a good explanation of your function
+#' @detail	# This is each granular detail of your function (there can be multiple of these sections)
+#' @param	# This is a parameter of your function
+#' @return	# This is what your function returns
+#' @export	# This is how your function gets exported to the NAMESPACE and is available for use after library() otherwise you use :::
+```
 
 [Documentation Info](http://r-pkgs.had.co.nz/man.html)
 
