@@ -15,6 +15,7 @@
   - [Step 5 - Documentation](#Document-Completed-R-Functions)
   - [Step 6 - Documentation Compilation](#Compile-Your-Documentation)
 * [References](#references)
+* [Reproducability](#reproducability)
 * [Clean Code](#clean-code)
   - [Step 1 - Devtools Check](#devtools-check)
   - [Step 2 - Lintr](#lintr)
@@ -215,6 +216,17 @@ and for packages, you can use this `yaml` trick to have all non-inline citations
 
 ```yaml
 nocite: '@*'
+```
+
+# REPRODUCABILITY
+
+[Return To Table Of Contents](#table-of-contents)
+
+One of the most important parts of science and academia is the ability for research or conclusions to be reproduced. People shouldn't be wondering what software you were using, or what versions of them you were running, and one way of capturing this information would be to capture your session info in a text document.
+
+```r
+writeLines(capture.output(sessionInfo()),
+	"sessionInfo.txt")
 ```
 
 # CLEAN CODE
