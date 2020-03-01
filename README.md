@@ -69,7 +69,7 @@ This way it just loops over a vector of the packages and installs what isnt alre
 
 ```r
 # Package names
-packages <- c("magrittr", "dplyr", "ggplot2",################ Tidyverse packages
+packages <- c("tidyverse",################################### Tidyverse packages
 	      "here",######################################## Directory management
 	      "knitr", "rmarkdown",########################## RMD libs
 	      "todor", "lintr",	############################# Code management libs
