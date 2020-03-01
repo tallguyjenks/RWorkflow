@@ -218,6 +218,8 @@ and for packages, you can use this `yaml` trick to have all non-inline citations
 nocite: '@*'
 ```
 
+you can also use the {`citr`} package to use an RStudio addin for citations
+
 # REPRODUCABILITY
 
 [Return To Table Of Contents](#table-of-contents)
