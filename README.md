@@ -16,6 +16,7 @@
   - [Step 6 - Documentation Compilation](#Compile-Your-Documentation)
 * [References](#references)
 * [Reproducability](#reproducability)
+* [Fine Tuning](#fine-tuning)
 * [Clean Code](#clean-code)
   - [Step 1 - Devtools Check](#devtools-check)
   - [Step 2 - Lintr](#lintr)
@@ -231,6 +232,12 @@ writeLines(capture.output(sessionInfo()),
 	"sessionInfo.txt")
 ```
 
+# FINE TUNING
+
+[Return To Table Of Contents](#table-of-contents)
+
+with the `profvis` package you can select a chunk of code and in RStudio click the profile option and profile the selected code and show resource intensive code and tune them to be more efficient. Good background on this from [HERE](https://resources.rstudio.com/rstudio-conf-2017/understand-code-performance-with-the-profiler-winston-chang)
+
 # CLEAN CODE
 
 [Return To Table Of Contents](#table-of-contents)
@@ -374,3 +381,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [Return To Table Of Contents](#table-of-contents)
 
 - Using `# TEXT -----` inside an R code chunk adds it to the table of contents of the RMarkdown document
+- Good websites for [RDocumentation](https://www.rdocumentation.org/) and Searching for [R Resources](https://rseek.org/)
+- Date opertor with lubridate `%m+%` and `%m-%` to add a date part to a date that is wise to things like jan31st doesnt go to feb31st but to feb28/29th
+- if moving data between languages use feather package and `.feather` files to make the interchange
+
+
+
+to be expounded on later:
+
+Template package, project, document templates for my analyses
+
+- reference: https://github.com/ledbettc/CIDAtools
+- reference: https://github.com/atlas-aai/ratlas
