@@ -14,6 +14,7 @@
   - [Step 4 - Iteration](#test-fix-iterate)
   - [Step 5 - Documentation](#Document-Completed-R-Functions)
   - [Step 6 - Documentation Compilation](#Compile-Your-Documentation)
+* [Modeling](#modeling)
 * [References](#references)
 * [Reproducability](#reproducability)
 * [Fine Tuning](#fine-tuning)
@@ -201,6 +202,18 @@ Bare Bones Template:
 [Return To Table Of Contents](#table-of-contents)
 
 Run `devtools::document()` (or press `Ctrl + Shift + D` in RStudio) to compile your documents into function documentation that appears in the `man/` directory and the NAMESPACE that contains all `@export` functions.
+
+# MODELING
+
+beyond just the `lm()` function, you can make a model object by `model <- lm(var1 ~ var2 + var4, data)` and then wrap that model object with
+
+```r
+performance::check_model(model)
+```
+
+and the output is graphical and awesomely useful. it is a bit slow though
+
+<!-- TODO This section needs to be fleshed out more with more info on modeling -->
 
 # REFERENCES
 
