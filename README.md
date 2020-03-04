@@ -112,6 +112,14 @@ todor::todor_package()
 
 Create the `Data/` directory to hold raw data files that will be cleaned and processed by `R` scripts in the `R/` directory for the RMarkdown document when sourced.
 
+To save tibbles or data from `R` that has already been tidy-ified to make sure they dont lose their specifications i.e. that a <chr> column is a factor, etc etc use the _{feather}_ package.
+
+```r
+library(feather)
+feather::write_feather(<x>,<path>)
+feather::read_feather(<path>)
+```
+
 ## Update Rbuildignore
 
 [Return To Table Of Contents](#table-of-contents)
