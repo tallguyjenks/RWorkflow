@@ -1,12 +1,13 @@
 # Table Of Contents
 
 * [Setup](#setup)
-  - [Step 0 - New Package](#Create-a-new-package-file)
-  - [Step 1 - DESCRIPTION](#Fill-out-description-file)
-  - [Step 2 - Package Loading](#use-the-package-loading-script)
-  - [Step 3 - TODO Management](#todo-management)
-  - [Step 4 - Data/](#create-data-directory)
-  - [Step 5 - .Rbuildignore](#Update-Rbuildignore)
+  - [Step 1 - New Package](#Create-a-new-package-file)
+  - [Step 2 - DESCRIPTION](#Fill-out-description-file)
+  - [Step 3 - Package Loading](#use-the-package-loading-script)
+  - [Step 4 - TODO Management](#todo-management)
+  - [Step 5 - Data/](#create-data-directory)
+  - [Step 6 - .Rbuildignore](#Update-Rbuildignore)
+  - [Step 7 - Ethics](#ethics)
 * [Analysis](#analysis)
   - [Step 1 - Writing .Rmd](#Begin-Writing-Your-Content)
   - [Step 2 - New Functions](#Create-New-R-Function-as-needed)
@@ -131,6 +132,16 @@ When building a package for installation and reproducablilty have the build proc
 
 if keeping the package in `GIT` version control then also update the `.gitignore`
 
+
+## Ethics
+
+[Return To Table Of Contents](#table-of-contents)
+
+"`deon` is a command line tool that allows you to easily add an ethics checklist to your data science projects. The conversation about ethics in data science, machine learning, and AI is increasingly important. The goal of `deon` is to push that conversation forward and provide concrete, actionable reminders to the developers that have influence over how data science gets done."
+
+[deon](https://github.com/drivendataorg/deon)
+
+[![Deon badge](https://img.shields.io/badge/ethics%20checklist-deon-brightgreen.svg?style=popout-square)](http://deon.drivendata.org/)
 
 # ANALYSIS
 
