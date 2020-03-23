@@ -10,11 +10,12 @@
   - [Step 7 - Ethics](#ethics)
 * [Analysis](#analysis)
   - [Step 1 - Writing .Rmd](#Begin-Writing-Your-Content)
-  - [Step 2 - New Functions](#Create-New-R-Function-as-needed)
-  - [Step 3 - Unit Tests](#write-unit-tests)
-  - [Step 4 - Iteration](#test-fix-iterate)
-  - [Step 5 - Documentation](#Document-Completed-R-Functions)
-  - [Step 6 - Documentation Compilation](#Compile-Your-Documentation)
+  - [Step 2 - Visualization](#visualization)
+  - [Step 3 - New Functions](#Create-New-R-Function-as-needed)
+  - [Step 4 - Unit Tests](#write-unit-tests)
+  - [Step 5 - Iteration](#test-fix-iterate)
+  - [Step 6 - Documentation](#Document-Completed-R-Functions)
+  - [Step 7 - Documentation Compilation](#Compile-Your-Documentation)
 * [Modeling](#modeling)
 * [References](#references)
 * [Reproducability](#reproducability)
@@ -162,6 +163,16 @@ In your RMarkdown Document you can begin filling in your content with what ever 
 Never use `require()` or `library()` in a packaged analysis, put these items in the DESCRIPTION file as imports or suggests to import them
 
 For local file management in the `.Rproj` project directory, i and many many others prefer to use the `here` package that uses the project root directory as the relative root and use relative directory references to reference other files in your package.
+
+## Visualization
+
+[Return To Table Of Contents](#table-of-contents)
+
+Two very great addins in RStudio for graphically editing and creating initial plots and visualizations without having to type all the code from scratch:
+
+- `esquisse` --- Initial plot creation to minimize boiler plate writing
+- `ggedit` --- Editing created plots graphically
+- `colourpicker` --- Custom color code pickers for themes and general use
 
 ## Create New R Function as needed
 
