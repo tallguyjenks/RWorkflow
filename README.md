@@ -92,6 +92,29 @@ lapply(packages, library, character.only = TRUE) %>%
   invisible()
 ```
 
+If performing a reporoducable analysis utilize `packrat` for a snapshot of your utilized packages / libraries.
+
+```r
+# setup packrat snapshot in your new package/project
+packrat::init(here::here())
+# To add package for use to your project in this snapshot environment you install as normal:
+install.packages("runes")
+# when you're ready to save your snapshot to packrat for your reproducable project:
+packrat::snapshot()
+# to check the status of your snapshot
+packrat::status()
+# to remove a package from your snapshot
+remove.packages("runes")
+# and to restore one
+packrat::restore()
+# if packages are not used:
+# Use packrat::clean() to remove them. Or, if they are actually needed
+# by your project, add `library(packagename)` calls to a .R file
+# somewhere in your project.
+```
+
+There are also plenty of GUI options for working with `packrat` in RStudio
+
 ## TODO management
 
 [Return To Table Of Contents](#table-of-contents)
