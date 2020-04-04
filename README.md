@@ -73,12 +73,14 @@ This way it just loops over a vector of the packages and installs what isnt alre
 
 ```r
 # Package names
-packages <- c("tidyverse",################################### Tidyverse packages
-	      "here",######################################## Directory management
-	      "knitr", "rmarkdown",########################## RMD libs
-	      "todor", "lintr",	############################# Code management libs
-	      "DT", "kableExtra",############################ Table libs
-	      "roxygen2", "testthat", "usethis", "devtools" # package libs
+packages <- c(
+"tidyverse",#################################### Tidyverse packages
+"here",######################################### Directory management
+"knitr", "rmarkdown",########################### RMD libs
+"todor", "lintr",############################### Code management libs
+"DT", "kableExtra",############################# Table libs
+"roxygen2", "testthat", "usethis", "devtools", # package libs
+"tidylog"####################################### Feedback on Dplyr verbs
 	     )
 
 # Install packages not yet installed
