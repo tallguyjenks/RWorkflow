@@ -303,6 +303,13 @@ writeLines(capture.output(sessionInfo()),
 [Return To Table Of Contents](#table-of-contents)
 
 with the `profvis` package you can select a chunk of code and in RStudio click the profile option and profile the selected code and show resource intensive code and tune them to be more efficient. Good background on this from [HERE](https://resources.rstudio.com/rstudio-conf-2017/understand-code-performance-with-the-profiler-winston-chang)
+Another tool to test variations of a function to see which is the most maximally efficient is the `microbenchmark` package.
+
+```r
+# this defaults to 100 iterations of each passed function call and will benchmark them
+# and tells you which of the different variations are maximally efficient.
+microbenchmark::microbenchmark(func1, ...)
+```
 
 # CLEAN CODE
 
