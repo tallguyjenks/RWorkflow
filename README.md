@@ -31,12 +31,6 @@
 
 [Return To Table Of Contents](#table-of-contents)
 
-<center>
-
-<img src="./img/dia1.png">
-
-</center>
-
 ## Create a new package file
 
 [Return To Table Of Contents](#table-of-contents)
@@ -172,12 +166,6 @@ if keeping the package in `GIT` version control then also update the `.gitignore
 # ANALYSIS
 
 [Return To Table Of Contents](#table-of-contents)
-
-<center>
-
-<img src="./img/dia2.png">
-
-</center>
 
 ## Begin Writing Your Content
 
@@ -316,12 +304,6 @@ microbenchmark::microbenchmark(func1, ...)
 # CLEAN CODE
 
 [Return To Table Of Contents](#table-of-contents)
-
-<center>
-
-<img src="./img/dia3.png">
-
-</center>
 
 ## Devtools Check
 
