@@ -24,7 +24,7 @@
   - [Step 1 - Devtools Check](#devtools-check)
   - [Step 2 - Lintr](#lintr)
   - [Step 3 - README](#a-readme)
-  - [Step 4 - Issue Templates](#issues-templates)
+  - [Step 4 - Issue Templates](#issue-templates)
   - [Step 5 - CHANGELOG](#changelog)
 * [Tips](#tips)
 
