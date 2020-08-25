@@ -24,7 +24,8 @@
   - [Step 1 - Devtools Check](#devtools-check)
   - [Step 2 - Lintr](#lintr)
   - [Step 3 - README](#a-readme)
-  - [Step 4 - CHANGELOG](#changelog)
+  - [Step 4 - Issue Templates](#issues-templates)
+  - [Step 5 - CHANGELOG](#changelog)
 * [Tips](#tips)
 
 # SETUP
@@ -329,6 +330,12 @@ lintr::lint_package()
 [Return To Table Of Contents](#table-of-contents)
 
 Use `README.md` file for github or just general user info, even keep an `.Rmd` document that compiles to a markdown document if you so wish that can be used to explain the package to users in a medium --> long form format so the user knows what to do to reproduce the analysis or use the package.
+
+## Issue Templates
+
+[Return To Table Of Contents](#table-of-contents)
+
+[IBM Watson](https://github.com/IBM-Watson/design-guide/wiki/Issue-Label-Style-Guide_)
 
 ## CHANGELOG
 
