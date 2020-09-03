@@ -208,6 +208,8 @@ to run all current tests `Ctrl + Shift + T` or `devtools::test()`
 
 Run your tests on your developing functions and fix any **ERRORS**, **WARNINGS**, or **NOTES** that come up
 
+To find answers to your errors you can use the [`tracestack`](https://github.com/dgrtwo/tracestack) package to find the last error message on stackoverflow 
+
 ## Document Completed R Functions
 
 [Return To Table Of Contents](#table-of-contents)
