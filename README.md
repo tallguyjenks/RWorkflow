@@ -67,26 +67,10 @@ LazyData: true
 This way it just loops over a vector of the packages and installs what isnt alread installed and loads what is installed so it is available for the RMarkdown product.
 
 ```r
-# Package names
-packages <- c(
-"tidyverse",#################################### Tidyverse packages
-"here",######################################### Directory management
-"knitr", "rmarkdown",########################### RMD libs
-"todor", "lintr",############################### Code management libs
-"DT", "kableExtra",############################# Table libs
-"roxygen2", "testthat", "usethis", "devtools", # package libs
-"tidylog"####################################### Feedback on Dplyr verbs
-	     )
-
-# Install packages not yet installed
-installed_packages <- packages %in% rownames(installed.packages())
-if (any(installed_packages == FALSE)) {
-  install.packages(packages[!installed_packages])
-}
-
-# Packages loading
-lapply(packages, library, character.only = TRUE) %>%
-  invisible()
+xfun::pkg_attach2(c(
+	"tidyverse", "here", "todor", "lintr", "DT", "kableExtra", 
+	"roxygen2", "testthat", "usethis", "devtools", "tidylog"
+), message = FALSE)
 ```
 
 If performing a reporoducable analysis utilize `packrat` for a snapshot of your utilized packages / libraries.
