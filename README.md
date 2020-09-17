@@ -67,10 +67,8 @@ LazyData: true
 This way it just loops over a vector of the packages and installs what isnt alread installed and loads what is installed so it is available for the RMarkdown product.
 
 ```r
-xfun::pkg_attach2(c(
-	"tidyverse", "here", "todor", "lintr", "DT", "kableExtra", 
-	"roxygen2", "testthat", "usethis", "devtools", "tidylog"
-), message = FALSE)
+packages <- c("tidyverse", "here", "todor", "lintr", "DT", "kableExtra", "roxygen2", "testthat", "usethis", "devtools", "tidylog")
+xfun::pkg_attach2(packages, message = FALSE)
 ```
 
 If performing a reporoducable analysis utilize `packrat` for a snapshot of your utilized packages / libraries.
