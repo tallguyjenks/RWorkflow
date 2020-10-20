@@ -269,8 +269,7 @@ you can also use the {`citr`} package to use an RStudio addin for citations
 One of the most important parts of science and academia is the ability for research or conclusions to be reproduced. People shouldn't be wondering what software you were using, or what versions of them you were running, and one way of capturing this information would be to capture your session info in a text document.
 
 ```r
-writeLines(capture.output(sessionInfo()),
-	"sessionInfo.txt")
+writeLines(capture.output(sessionInfo()), "sessionInfo.txt")
 ```
 
 # FINE TUNING
