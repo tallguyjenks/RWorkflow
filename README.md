@@ -260,7 +260,7 @@ and for packages, you can use this `yaml` trick to have all non-inline citations
 nocite: '@*'
 ```
 
-you can also use the {`citr`} package to use an RStudio addin for citations
+you can also use the {`citr`} package to use an RStudio addin for citations, Now in newer versions of RStudio this integrates seamlessly with Zotero.
 
 # REPRODUCABILITY
 
