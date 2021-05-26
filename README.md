@@ -190,7 +190,7 @@ to run all current tests `Ctrl + Shift + T` or `devtools::test()`
 
 Run your tests on your developing functions and fix any **ERRORS**, **WARNINGS**, or **NOTES** that come up
 
-To find answers to your errors you can use the [`tracestack`](https://github.com/dgrtwo/tracestack) package to find the last error message on stackoverflow 
+To find answers to your errors you can use the [`tracestack`](https://github.com/dgrtwo/tracestack) package to find the last error message on stackoverflow
 
 ## Document Completed R Functions
 
@@ -207,12 +207,12 @@ Use `roxygen2` documentation on all functions script files in `R/`
 Bare Bones Template:
 
 ```r
-#' @title	# This Is the Name of your funtion
+#' @title       # This Is the Name of your funtion
 #' @description # This is a good explanation of your function
-#' @detail	# This is each granular detail of your function (there can be multiple of these sections)
-#' @param	# This is a parameter of your function
-#' @return	# This is what your function returns
-#' @export	# This is how your function gets exported to the NAMESPACE and is available for use after library() otherwise you use :::
+#' @detail      # This is each granular detail of your function (there can be multiple of these sections)
+#' @param       # This is a parameter of your function
+#' @return      # This is what your function returns
+#' @export      # This is how your function gets exported to the NAMESPACE and is available for use after library() otherwise you use :::
 ```
 
 [Documentation Info](http://r-pkgs.had.co.nz/man.html)
